@@ -27,12 +27,12 @@ export default function WorkWithMePage() {
   }
 
   return (
-    <div className="pb-20">
+    <div className="pb-20" style={{ fontFamily: 'Montserrat, sans-serif' }}>
       {/* Hero */}
       <section className="bg-card py-12 md:py-20 mb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 text-balance">
+            <h1 className="text-4xl md:text-6xl font-medium mb-6 text-balance">
               Let's create something remarkable together
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -46,7 +46,7 @@ export default function WorkWithMePage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Services */}
         <section className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12">Services</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-12">Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
@@ -75,7 +75,7 @@ export default function WorkWithMePage() {
               },
             ].map((service, i) => (
               <div key={i} className="bg-card p-8 rounded-sm border border-border">
-                <h3 className="text-xl font-serif font-semibold mb-3">{service.title}</h3>
+                <h3 className="text-xl font-medium mb-3">{service.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.includes.map((item, j) => (
@@ -92,7 +92,7 @@ export default function WorkWithMePage() {
 
         {/* About */}
         <section className="max-w-3xl mb-20">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">About me</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-6">About me</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             With over a decade of experience across multiple creative disciplines, I bring a unique perspective that
             combines strategic thinking with hands-on execution. My work has helped brands of all sizes—from startups to
@@ -107,7 +107,7 @@ export default function WorkWithMePage() {
 
         {/* Selected Clients */}
         <section className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Trusted by</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-6">Trusted by</h2>
           <p className="text-lg text-muted-foreground mb-8">
             I've had the privilege of working with innovative companies across industries
           </p>
@@ -124,7 +124,7 @@ export default function WorkWithMePage() {
             ].map((client, i) => (
               <div
                 key={i}
-                className="aspect-[16/9] bg-muted rounded-sm flex items-center justify-center text-sm text-muted-foreground font-medium"
+                className="aspect-[16/9] bg-muted rounded-sm flex items-center justify-center text-sm text-muted-foreground font-normal"
               >
                 {client}
               </div>
@@ -134,7 +134,7 @@ export default function WorkWithMePage() {
 
         {/* Testimonials */}
         <section className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12">What clients say</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-12">What clients say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
@@ -153,7 +153,7 @@ export default function WorkWithMePage() {
               <div key={i} className="bg-card p-8 rounded-sm">
                 <p className="text-lg leading-relaxed mb-6 italic">"{testimonial.quote}"</p>
                 <div>
-                  <div className="font-semibold">{testimonial.author}</div>
+                  <div className="font-medium">{testimonial.author}</div>
                   <div className="text-sm text-muted-foreground">{testimonial.role}</div>
                 </div>
               </div>
@@ -163,7 +163,7 @@ export default function WorkWithMePage() {
 
         {/* FAQs */}
         <section className="max-w-3xl mb-20">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8">Frequently asked questions</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-8">Frequently asked questions</h2>
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-left">What is your typical project timeline?</AccordionTrigger>
@@ -203,7 +203,7 @@ export default function WorkWithMePage() {
         {/* Contact Form */}
         <section className="max-w-3xl">
           <div className="bg-card p-8 md:p-12 rounded-sm">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Start a project</h2>
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">Start a project</h2>
             <p className="text-muted-foreground mb-8">
               Fill out the form below and I'll get back to you within 24 hours to discuss your project.
             </p>

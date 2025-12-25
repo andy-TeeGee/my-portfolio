@@ -5,13 +5,13 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-const categories = ["All", "Graphic Design", "Campaigns", "Creative", "Photography", "Branding"]
+const categories = ["All", "Brand Strategy", "Digital Campaigns", "Research & Insights", "Visual Design", "Social Impact"]
 
 const projects = [
   {
     id: "brand-identity-refresh",
     title: "Brand Identity Refresh",
-    category: "Branding",
+    category: "Social Impact",
     year: "2024",
     tags: ["Identity", "Strategy", "Visual Design"],
     image: "/modern-brand-identity.png",
@@ -20,16 +20,16 @@ const projects = [
   {
     id: "editorial-campaign",
     title: "Editorial Campaign",
-    category: "Photography",
+    category: "Visual Design",
     year: "2024",
-    tags: ["Photography", "Editorial", "Fashion"],
-    image: "/editorial-fashion-photography.jpg",
+    tags: ["Visual Design", "Editorial", "Fashion"],
+    image: "/editorial-fashion-Visual Design.jpg",
     description: "Seasonal fashion editorial for international magazine",
   },
   {
     id: "product-launch",
     title: "Product Launch",
-    category: "Campaigns",
+    category: "Digital Campaigns",
     year: "2024",
     tags: ["Campaign", "Digital", "Print"],
     image: "/product-launch-campaign.png",
@@ -38,43 +38,43 @@ const projects = [
   {
     id: "visual-system",
     title: "Visual System",
-    category: "Graphic Design",
+    category: "Brand Strategy",
     year: "2023",
-    tags: ["Design System", "UI/UX", "Branding"],
+    tags: ["Design System", "UI/UX", "Social Impact"],
     image: "/visual-design-system.jpg",
     description: "Comprehensive design system for SaaS platform",
   },
   {
     id: "cultural-festival",
     title: "Cultural Festival",
-    category: "Creative",
+    category: "Research & Insights",
     year: "2023",
-    tags: ["Creative Direction", "Event", "Branding"],
-    image: "/cultural-festival-branding.jpg",
-    description: "Full creative direction for annual cultural event",
+    tags: ["Research & Insights Direction", "Event", "Social Impact"],
+    image: "/cultural-festival-Social Impact.jpg",
+    description: "Full Research & Insights direction for annual cultural event",
   },
   {
     id: "architecture-series",
     title: "Architecture Series",
-    category: "Photography",
+    category: "Visual Design",
     year: "2023",
-    tags: ["Photography", "Architecture", "Editorial"],
-    image: "/architectural-photography.png",
+    tags: ["Visual Design", "Architecture", "Editorial"],
+    image: "/architectural-Visual Design.png",
     description: "Documentary series on modern urban architecture",
   },
   {
-    id: "restaurant-branding",
-    title: "Restaurant Branding",
-    category: "Branding",
+    id: "restaurant-Social Impact",
+    title: "Restaurant Social Impact",
+    category: "Social Impact",
     year: "2023",
     tags: ["Identity", "Print", "Environmental"],
-    image: "/restaurant-branding-design.jpg",
-    description: "Complete branding package for boutique restaurant",
+    image: "/restaurant-Social Impact-design.jpg",
+    description: "Complete Social Impact package for boutique restaurant",
   },
   {
     id: "social-campaign",
     title: "Social Campaign",
-    category: "Campaigns",
+    category: "Digital Campaigns",
     year: "2023",
     tags: ["Social Media", "Digital", "Content"],
     image: "/social-media-campaign.png",
@@ -94,7 +94,7 @@ export default function PortfolioPage() {
       <div className="mb-12">
         <h1 className="text-4xl md:text-6xl font-medium mb-4">Portfolio</h1>
         <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-          A collection of selected projects spanning multiple creative disciplines. Each project represents a unique
+          A collection of selected projects spanning multiple Research & Insights disciplines. Each project represents a unique
           challenge and collaborative journey.
         </p>
       </div>

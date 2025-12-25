@@ -57,10 +57,10 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20" style={{ fontFamily: 'Montserrat, sans-serif' }}>
       {/* Header */}
       <div className="mb-16">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">Blog</h1>
+        <h1 className="text-4xl md:text-6xl font-medium mb-4">Journal</h1>
         <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
           Thoughts on creativity, design, photography, and the business of making things. Insights from years of working
           across multiple creative disciplines.
@@ -69,7 +69,7 @@ export default function BlogPage() {
 
       {/* Featured Post */}
       {blogPosts[0] && (
-        <Link href={`/blog/${blogPosts[0].slug}`} className="group block mb-16">
+        <Link href={`/journal/${blogPosts[0].slug}`} className="group block mb-16">
           <article className="grid md:grid-cols-2 gap-8 items-center">
             <div className="aspect-[16/10] bg-muted rounded-sm overflow-hidden order-2 md:order-1">
               <img
@@ -86,7 +86,7 @@ export default function BlogPage() {
                   </span>
                 ))}
               </div>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4 group-hover:text-primary transition-colors text-balance">
+              <h2 className="text-3xl md:text-4xl font-medium mb-4 group-hover:text-primary transition-colors text-balance">
                 {blogPosts[0].title}
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4 text-pretty">{blogPosts[0].summary}</p>
@@ -100,10 +100,13 @@ export default function BlogPage() {
         </Link>
       )}
 
+      {/* Divider */}
+      <div className="border-t-2 border-border mb-16"></div>
+
       {/* All Posts */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {blogPosts.slice(1).map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
+          <Link key={post.slug} href={`/journal/${post.slug}`} className="group">
             <article>
               <div className="aspect-[16/10] bg-muted rounded-sm overflow-hidden mb-4">
                 <img
@@ -119,7 +122,7 @@ export default function BlogPage() {
                   </span>
                 ))}
               </div>
-              <h2 className="text-xl font-serif font-semibold mb-2 group-hover:text-primary transition-colors">
+              <h2 className="text-xl font-medium mb-2 group-hover:text-primary transition-colors">
                 {post.title}
               </h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-3 line-clamp-2">{post.summary}</p>

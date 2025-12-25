@@ -68,9 +68,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <div className="bg-card py-12 md:py-20 mb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Button asChild variant="ghost" size="sm" className="mb-8">
-            <Link href="/blog">
+            <Link href="/journal">
               <ArrowLeft className="mr-2" size={16} />
-              Back to blog
+              Back to journal
             </Link>
           </Button>
 
