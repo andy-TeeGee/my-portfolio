@@ -89,10 +89,10 @@ export default function PortfolioPage() {
     selectedCategory === "All" ? projects : projects.filter((p) => p.category === selectedCategory)
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20" style={{ fontFamily: 'Montserrat, sans-serif' }}>
       {/* Header */}
       <div className="mb-12">
-        <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">Portfolio</h1>
+        <h1 className="text-4xl md:text-6xl font-medium mb-4">Portfolio</h1>
         <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
           A collection of selected projects spanning multiple creative disciplines. Each project represents a unique
           challenge and collaborative journey.
@@ -127,7 +127,7 @@ export default function PortfolioPage() {
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between items-start">
-                  <h2 className="text-xl font-serif font-semibold group-hover:text-primary transition-colors">
+                  <h2 className="text-xl font-medium group-hover:text-primary transition-colors">
                     {project.title}
                   </h2>
                   <span className="text-sm text-muted-foreground">{project.year}</span>

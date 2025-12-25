@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button" // Ensure you have this componen
 // Updated to match your new Sitemap
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/work", label: "Work" },
+  { href: "/portfolio", label: "Portfolio" },
   { href: "/about", label: "About" },
   { href: "/journal", label: "Journal" },
   // "Work with me" is handled separately in the JSX to give it button styling
@@ -24,9 +24,10 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="text-xl font-serif font-semibold tracking-tight">
+          <Link href="/" className="text-xl font-medium tracking-tight" style={{ fontFamily: 'Montserrat, sans-serif' }}>
             Andy Goheen
           </Link>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">

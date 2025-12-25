@@ -30,48 +30,14 @@ export default function HomePage() {
               <Link href="/portfolio">View portfolio</Link>
             </Button>
           </div>
-
-          {/* Social Links */}
-          <div className="flex items-center gap-6 mt-12">
-            <span className="text-sm text-muted-foreground">Follow along</span>
-            <div className="flex items-center gap-4">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
+        </div> 
       </section>
 
       {/* Featured Work Preview */}
       <section className="bg-card py-20 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">Selected work</h2>
+            <h2 className="text-3xl md:text-5xl font-medium mb-4">Selected work</h2>
             <p className="text-lg text-muted-foreground max-w-2xl">
               A curated collection of recent projects spanning campaigns, technical graphic design, creative direction, and
               photography.
@@ -115,7 +81,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="text-xl font-serif font-semibold mb-1 group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-medium mb-1 group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
                     <p className="text-sm text-muted-foreground">{project.category}</p>
@@ -137,7 +103,7 @@ export default function HomePage() {
       {/* Services Overview */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">What I do</h2>
+          <h2 className="text-3xl md:text-5xl font-medium mb-6">What I do</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             I bring a holistic approach to creative problem-solving, combining strategic thinking with hands-on
             execution across multiple disciplines.
@@ -176,7 +142,7 @@ export default function HomePage() {
             },
           ].map((service, i) => (
             <div key={i} className="bg-card p-8 rounded-sm">
-              <h3 className="text-xl font-serif font-semibold mb-3">{service.title}</h3>
+              <h3 className="text-xl font-medium mb-3">{service.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
             </div>
           ))}
