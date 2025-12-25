@@ -11,9 +11,10 @@ export default function HomePage() {
           <p className="text-sm text-muted-foreground mb-6 tracking-wide uppercase">
             Multidisciplinary Creative Consultant
           </p>
-          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 text-balance leading-tight">
-            Transforming vision into compelling visual narratives
+          <h1 className="text-5xl md:text-7xl font-normal italic mb-8 text-balance leading-tight">
+            Hi, I'm Andy.
           </h1>
+
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl text-pretty">
             I craft distinctive brand experiences through strategic design, creative campaigns, and authentic visual
             storytelling. From concept to execution, I bring clarity and creativity to every project.
@@ -72,7 +73,7 @@ export default function HomePage() {
           <div className="mb-12">
             <h2 className="text-3xl md:text-5xl font-serif font-bold mb-4">Selected work</h2>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              A curated collection of recent projects spanning graphic design, campaigns, creative direction, and
+              A curated collection of recent projects spanning campaigns, technical graphic design, creative direction, and
               photography.
             </p>
           </div>

@@ -1,58 +1,30 @@
-import type React from "react"
 import type { Metadata } from "next"
-import { Cormorant_Garamond, Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
+import { Montserrat } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 
-const cormorant = Cormorant_Garamond({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-serif",
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
+  weight: ["300", "400"],
+  style: ["normal", "italic"],
+  display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: "Creative Consultant | Multidisciplinary Design & Strategy",
-  description:
-    "Expert creative consultant specializing in graphic design, campaigns, creative direction, photography, and branding.",
-  generator: "v0.app",
-  icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
-  },
+  title: "Andy Goheen | Digital Marketer & Researcher",
+  description: "Portfolio of Andrew 'Andy' Goheen",
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased`}>
+      <body className={montserrat.className}>
         <Header />
         <main>{children}</main>
-        <Footer />
-        <Analytics />
       </body>
     </html>
   )
