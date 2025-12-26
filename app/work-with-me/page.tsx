@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import Image from "next/image"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -27,17 +27,16 @@ export default function WorkWithMePage() {
   }
 
   return (
-    <div className="pb-20" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+    <div className="pb-20">
       {/* Hero */}
       <section className="bg-card py-12 md:py-20 mb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-medium mb-6 text-balance">
-              Let's create something remarkable together
+              Let's build something that works as good as it looks.
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I partner with forward-thinking brands and organizations to solve complex creative challenges through
-              strategic thinking and exceptional craft.
+              I don't just make things pretty. I bridge the gap between creative vision and business strategy to build brands, campaigns, and digital experiences that actually drive results.
             </p>
           </div>
         </div>
@@ -52,26 +51,26 @@ export default function WorkWithMePage() {
               {
                 title: "Brand Strategy & Identity",
                 description:
-                  "Comprehensive brand development from positioning and strategy to visual identity systems and guidelines.",
-                includes: ["Brand positioning", "Visual identity", "Brand guidelines", "Collateral design"],
+                  "Translating core business values into distinct, cohesive visual systems that stand out in crowded markets.",
+                includes: ["Market Positioning & Research", "Brand & Visual Identity", "Value Generation", "Graphic Design"],
               },
               {
-                title: "Creative Campaigns",
+                title: "Creative & Digital Campaigns",
                 description:
-                  "Integrated creative campaigns that capture attention and drive meaningful engagement across channels.",
-                includes: ["Campaign strategy", "Creative direction", "Asset production", "Multi-channel execution"],
+                  "Data-backed creative concepts designed to engage audiences and drive conversion across digital touchpoints.",
+                includes: ["Go-to-Market Strategy", "Creative Direction", "Content Creation", "Ad Creative & Copywriting"],
               },
               {
-                title: "Photography & Visual Content",
+                title: "eCommerce & Website Design",
                 description:
-                  "Commercial and editorial photography that tells authentic stories and elevates brand narratives.",
-                includes: ["Commercial photography", "Editorial shoots", "Content strategy", "Image curation"],
+                  "Designing responsive, high-converting storefronts and promotional sites that balance aesthetics with performance.",
+                includes: ["SEO-First Architecture", "User Interface (UI) Design", "Platform Development", "Conversion Optimization"],
               },
               {
-                title: "Creative Direction & Consulting",
+                title: "Digital Operations & Consulting",
                 description:
-                  "Strategic guidance and hands-on direction to elevate creative output and streamline processes.",
-                includes: ["Creative strategy", "Team direction", "Process optimization", "Quality assurance"],
+                  "Bridging the gap between creative vision and technical implementation.",
+                includes: ["Workflow Optimization", "Tech Stack Integration", "QA & Compliance", "Stakeholder Management"],
               },
             ].map((service, i) => (
               <div key={i} className="bg-card p-8 rounded-sm border border-border">
@@ -90,47 +89,54 @@ export default function WorkWithMePage() {
           </div>
         </section>
 
-        {/* About */}
-        <section className="max-w-3xl mb-20">
-          <h2 className="text-3xl md:text-4xl font-medium mb-6">About me</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            With over a decade of experience across multiple creative disciplines, I bring a unique perspective that
-            combines strategic thinking with hands-on execution. My work has helped brands of all sizes—from startups to
-            Fortune 500 companies—communicate more effectively and connect more authentically with their audiences.
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            I believe the best creative work happens at the intersection of clear strategy, exceptional craft, and
-            genuine collaboration. I partner closely with clients to understand their challenges, explore possibilities,
-            and deliver work that makes a meaningful impact.
-          </p>
-        </section>
-
         {/* Selected Clients */}
         <section className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-medium mb-6">Trusted by</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-6">Select Partners</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            I've had the privilege of working with innovative companies across industries
+            Partnering with ambitious organizations to scale their digital presence and operational efficiency.
+
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              "Client One",
-              "Client Two",
-              "Client Three",
-              "Client Four",
-              "Client Five",
-              "Client Six",
-              "Client Seven",
-              "Client Eight",
+              { 
+                name: "Depatie", 
+                src: "/logos/Trustedby_Depatie.jpg", 
+                url: "https://www.depatie.com"
+              },
+              { 
+                name: "Mammha", 
+                src: "/logos/Trustedby_Mammha.jpg", 
+                url: "https://www.mammha.com" 
+              },
+              { 
+                name: "Blu-M Studios", 
+                src: "/logos/Trustedby_BluM.jpg", 
+                url: "https://blu-m.com/" 
+              },
+              { 
+                name: "Rob Seth Construction", 
+                src: "/logos/Trustedby_RSC.jpg", 
+                url: "https://www.robsethconstruction.com" 
+              },
             ].map((client, i) => (
-              <div
+              <a
                 key={i}
-                className="aspect-[16/9] bg-muted rounded-sm flex items-center justify-center text-sm text-muted-foreground font-normal"
+                href={client.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative aspect-[16/9] bg-white rounded-sm border border-border overflow-hidden block hover:border-primary/50 transition-colors"
               >
-                {client}
-              </div>
+                <Image
+                  src={client.src}
+                  alt={`${client.name} logo`}
+                  fill
+                  className="object-contain"
+                />
+              </a>
             ))}
           </div>
         </section>
+
 
         {/* Testimonials */}
         <section className="mb-20">
@@ -139,15 +145,15 @@ export default function WorkWithMePage() {
             {[
               {
                 quote:
-                  "Working with [Name] transformed not just our brand, but how we think about our business. The strategic insights paired with beautiful execution exceeded all expectations.",
-                author: "Sarah Johnson",
-                role: "CEO, Sustainable Living Co.",
+                  "Working with Andrew transformed not just our brand, but how we think about our business and our customers. His insights paired with his execution exceeded all expectations.",
+                author: "Mary Glerum",
+                role: "CEO, Blu-M Studios",
               },
               {
                 quote:
-                  "Rare combination of strategic thinking and creative excellence. [Name] understood our vision immediately and brought it to life in ways we hadn't imagined.",
-                author: "Michael Chen",
-                role: "Marketing Director, Tech Startup",
+                  "Andy's ability to use creativity, outreach, and owned media to increase our online presence has been a game-changer for our business growth.",
+                author: "Rob Seth",
+                role: "Owner, Rob Seth Construction",
               },
             ].map((testimonial, i) => (
               <div key={i} className="bg-card p-8 rounded-sm">
@@ -168,7 +174,7 @@ export default function WorkWithMePage() {
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-left">What is your typical project timeline?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Project timelines vary based on scope and complexity. A typical brand identity project takes 6-8 weeks,
+                Project timelines vary based on scope and complexity. A typical brand identity project takes 3-6 weeks,
                 while campaign work might range from 4-12 weeks. I'll provide a detailed timeline during our initial
                 consultation based on your specific needs.
               </AccordionContent>
@@ -184,17 +190,17 @@ export default function WorkWithMePage() {
             <AccordionItem value="item-3">
               <AccordionTrigger className="text-left">Do you work with clients remotely?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Yes! I work with clients all over the world. Most of my projects are conducted remotely with virtual
-                meetings and collaborative tools. For photography projects or intensive workshops, I can travel to your
-                location when needed.
+                Yes! I work with clients all over the US, and would love to expand abroad! Most of my work can be done remotely with virtual
+                meetings and collaborative tools. For promotional projects or intensive workshops, I can travel to your
+                location if needed.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger className="text-left">What makes your approach different?</AccordionTrigger>
+              <AccordionTrigger className="text-left">Why choose you over an agency?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                I bring a multidisciplinary perspective that connects strategy with execution. Rather than working in
-                silos, I consider how all creative touchpoints work together to tell a cohesive story. This holistic
-                approach leads to more effective, integrated creative solutions.
+                Most agencies separate "creative" from "technical." 
+                I build them together. 
+                Because I understand the code, the SEO, the customer, and the business strategy behind the design, I create work that doesn't just look good, but deploys correctly, ranks higher, and converts faster.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -203,9 +209,9 @@ export default function WorkWithMePage() {
         {/* Contact Form */}
         <section className="max-w-3xl">
           <div className="bg-card p-8 md:p-12 rounded-sm">
-            <h2 className="text-3xl md:text-4xl font-medium mb-4">Start a project</h2>
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">Project Inquiry</h2>
             <p className="text-muted-foreground mb-8">
-              Fill out the form below and I'll get back to you within 24 hours to discuss your project.
+              Fill out the form below and I'll get back to you within 2 business days to discuss your project!
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -244,7 +250,7 @@ export default function WorkWithMePage() {
                   <Label htmlFor="budget">Budget Range</Label>
                   <Input
                     id="budget"
-                    placeholder="e.g., $10k-$25k"
+                    placeholder="e.g., $1k - $10k+"
                     value={formData.budget}
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                   />
@@ -255,7 +261,7 @@ export default function WorkWithMePage() {
                 <Label htmlFor="service">Service Interested In *</Label>
                 <Input
                   id="service"
-                  placeholder="e.g., Brand Identity, Campaign, Photography"
+                  placeholder="e.g., Brand Refresh, Content Marketing, SEO?"
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                   required
@@ -281,8 +287,8 @@ export default function WorkWithMePage() {
 
             <p className="text-sm text-muted-foreground mt-6">
               Prefer email? Reach me directly at{" "}
-              <a href="mailto:hello@creativestudio.com" className="text-primary hover:underline">
-                hello@creativestudio.com
+              <a href="mailto:andrewtgoheen@gmail.com" className="text-primary hover:underline">
+                andrewtgoheen@gmail.com
               </a>
             </p>
           </div>
