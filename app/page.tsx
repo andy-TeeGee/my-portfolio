@@ -1,36 +1,145 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Instagram, Linkedin, Twitter } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, BarChart3, Target, PenTool, Lightbulb } from "lucide-react";
+import OrbitingCircles from "@/components/visuals/orbiting-circles";
 
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <div className="max-w-4xl">
-          <p className="text-sm text-muted-foreground mb-6 tracking-wide uppercase">
-            Strategic Creative for Purpose-Driven Brands
-          </p>
-          <h1 className="text-5xl md:text-7xl font-normal italic mb-8 text-balance leading-tight">
-            Hi, I'm Andy.
-          </h1>
+      {/* Hero Section - Padding reduced by ~15% (py-16 md:py-24) */}
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div className="lg:flex lg:items-center lg:justify-between lg:gap-12">
+          
+          {/* Left Side: Your Content */}
+          <div className="flex-1 max-w-4xl lg:text-left text-center mx-auto lg:mx-0">
+            <p className="text-sm text-muted-foreground mb-6 tracking-wide uppercase">
+              Strategic Creative for Purpose-Driven Brands
+            </p>
+            <h1 className="text-5xl md:text-7xl font-normal italic mb-8 text-balance leading-tight">
+              Hi, I'm Andy.
+            </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl text-pretty">
-            I partner with purpose-driven organizations to build brands and campaigns 
-            that resonate with audiences and create lasting impact. From strategy to 
-            execution, I bring clarity, creativity, and a commitment to work that matters.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="text-base">
-              <Link href="/work-with-me">
-                Work with me
-                <ArrowRight className="ml-2" size={18} />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="text-base bg-transparent">
-              <Link href="/portfolio">View portfolio</Link>
-            </Button>
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 text-pretty">
+              I partner with purpose-driven organizations to build brands and campaigns 
+              that resonate with audiences and create lasting impact. From strategy to 
+              execution, I bring clarity, creativity, and a commitment to work that matters.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button asChild size="lg" className="text-base">
+                <Link href="/work-with-me">
+                  Work with me
+                  <ArrowRight className="ml-2" size={18} />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-base bg-transparent">
+                <Link href="/portfolio">View portfolio</Link>
+              </Button>
+            </div>
           </div>
+
+          {/* Right Side: The Orbiting Circles Animation */}
+          <div className="flex-1 mt-16 lg:mt-0 flex justify-center lg:justify-end">
+            <div className="relative flex h-[500px] w-full max-w-[500px] flex-col items-center justify-center overflow-hidden">
+              
+              {/* --- INNER ORBIT --- */}
+              <OrbitingCircles
+                className="border bg-background/90 shadow-sm"
+                iconSize={36}
+                duration={30}
+                delay={0}
+                radius={80}
+              >
+                <BarChart3 className="size-5 text-primary" />
+              </OrbitingCircles>
+              
+              <OrbitingCircles
+                className="border bg-background/90 shadow-sm"
+                iconSize={36}
+                duration={30}
+                delay={7.5}
+                radius={80}
+                path={false}
+              >
+                <PenTool className="size-5 text-foreground" />
+              </OrbitingCircles>
+
+               <OrbitingCircles
+                className="border bg-background/90 shadow-sm"
+                iconSize={36}
+                duration={30}
+                delay={15} 
+                radius={80}
+                path={false}
+              >
+                <Target className="size-5 text-primary" />
+              </OrbitingCircles>
+
+               <OrbitingCircles
+                className="border bg-background/90 shadow-sm"
+                iconSize={36}
+                duration={30}
+                delay={22.5}
+                radius={80}
+                path={false}
+              >
+                <Lightbulb className="size-5 text-foreground" />
+              </OrbitingCircles>
+
+
+              {/* --- OUTER ORBIT --- */}
+              {/* Swapped: Target is now first (delay 0), Lightbulb is second (delay 10) */}
+              
+              <OrbitingCircles
+                className="border bg-background/90 shadow-sm"
+                iconSize={60}
+                radius={190}
+                duration={40}
+                delay={0}
+                reverse
+              >
+                <Target className="size-[29px] text-primary" />
+              </OrbitingCircles>
+              
+              <OrbitingCircles
+                className="border bg-background/90 shadow-sm"
+                iconSize={60}
+                radius={190}
+                duration={40}
+                delay={10}
+                reverse
+                path={false}
+              >
+                <Lightbulb className="size-[29px] text-foreground" />
+              </OrbitingCircles>
+
+              <OrbitingCircles
+                className="border bg-background/90 shadow-sm"
+                iconSize={60}
+                radius={190}
+                duration={40}
+                delay={20}
+                reverse
+                path={false}
+              >
+                <BarChart3 className="size-[29px] text-primary" />
+              </OrbitingCircles>
+
+              <OrbitingCircles
+                className="border bg-background/90 shadow-sm"
+                iconSize={60}
+                radius={190}
+                duration={40}
+                delay={30}
+                reverse
+                path={false}
+              >
+                <PenTool className="size-[29px] text-foreground" />
+              </OrbitingCircles>
+              
+            </div>
+          </div>
+
         </div> 
       </section>
 
