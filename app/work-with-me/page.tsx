@@ -49,15 +49,15 @@ export default function WorkWithMePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
-                title: "Brand Strategy & Identity",
+                title: "Brand Strategy",
                 description:
-                  "Translating core business values into distinct, cohesive visual systems that stand out in crowded markets.",
+                  "Translating core business values into distinct, cohesive systems that stand out in crowded markets.",
                 includes: ["Market Positioning & Research", "Brand & Visual Identity", "Value Generation", "Graphic Design"],
               },
               {
                 title: "Creative & Digital Campaigns",
                 description:
-                  "Data-backed creative concepts designed to engage audiences and drive conversion across digital touchpoints.",
+                  "Data-backed creative campaigns designed to engage audiences and drive conversion across digital channels.",
                 includes: ["Go-to-Market Strategy", "Creative Direction", "Content Creation", "Ad Creative & Copywriting"],
               },
               {

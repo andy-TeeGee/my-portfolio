@@ -40,20 +40,7 @@
   --input: oklch(0.92 0.01 50);
   --ring: oklch(0.45 0.15 25);
 
-  --chart-1: oklch(0.45 0.15 25);
-  --chart-2: oklch(0.6 0.12 40);
-  --chart-3: oklch(0.7 0.08 60);
-  --chart-4: oklch(0.35 0.1 20);
-  --chart-5: oklch(0.75 0.06 50);
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
@@ -76,23 +63,9 @@
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
   --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
 }
 
 @theme inline {
-  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -112,23 +85,10 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 @layer base {
@@ -141,17 +101,33 @@
     font-weight: 300 !important;
   }
 
-  h1 {
-    font-weight: 400 !important;
-  }
+  h1 { font-weight: 400 !important; }
+  h2, h3 { font-weight: 500 !important; }
+  h4, h5, h6 { font-weight: 400 !important; }
+}
 
-  h2, h3 {
-    font-weight: 500 !important; /* Medium weight, matches your logo */
+/* --- ORBITING CIRCLES ANIMATION --- */
+/* Defined globally to avoid Tailwind config conflicts */
+@keyframes orbit-movement {
+  0% {
+    transform: rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg);
   }
-
-  h4, h5, h6 {
-    font-weight: 400 !important;
+  100% {
+    transform: rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg);
   }
 }
 
+.orbiting-icon {
+  /* Using 'orbit-movement' keyframes defined above */
+  animation: orbit-movement calc(var(--duration) * 1s) linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
 
+.orbit-track {
+  stroke: rgba(0,0,0,0.1); /* Light gray track */
+}
+.dark .orbit-track {
+  stroke: rgba(255,255,255,0.1);
+}

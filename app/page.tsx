@@ -156,28 +156,28 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {[
               {
-                title: "Brand Identity Refresh",
-                category: "Branding",
-                year: "2024",
-                image: "/modern-brand-identity.png",
+                title: "Industrial B2B Digital Awareness Campaign",
+                category: "Digital Campaigns",
+                year: "2025",
+                image: "/depatie-campaign-overview-cover.jpg",
               },
               {
-                title: "Editorial Campaign",
-                category: "Photography",
-                year: "2024",
-                image: "/editorial-fashion-photography.jpg",
+                title: "FemTech Startup Rebrand & Identity Refresh",
+                category: "Brand Strategy",
+                year: "2025",
+                image: "/mammha-rebrand-overview-cover.jpg",
               },
               {
-                title: "Product Launch",
-                category: "Campaigns",
-                year: "2024",
-                image: "/product-launch-campaign.png",
+                title: "Systems Analysis & Design Research on Generative AI",
+                category: "Research & Insights",
+                year: "2025",
+                image: "/systems-analysis-research-paper.png",
               },
               {
-                title: "Visual System",
-                category: "Graphic Design",
+                title: "The Doors - Live In Bakersfield Promotional Posters",
+                category: "Visual Design",
                 year: "2023",
-                image: "/visual-design-system.jpg",
+                image: "/doors-poster.jpg",
               },
             ].map((project, i) => (
               <Link key={i} href={`/portfolio/${project.title.toLowerCase().replace(/\s+/g, "-")}`} className="group">
@@ -214,41 +214,33 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-medium mb-6">What I do</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            I bring a holistic approach to creative problem-solving, combining strategic thinking with hands-on
-            execution across multiple disciplines.
+             I bridge the gap between creative vision and business strategy. I don't just design assets; 
+            I build brands, campaigns, and digital systems that drive measurable growth.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {[
             {
-              title: "Graphic Design",
+              title: "Brand Strategy",
               description:
-                "Visual identity systems, print collateral, and digital design that communicates with clarity and impact.",
+                "Translating core business values into distinct, cohesive systems that stand out in crowded markets.",
             },
             {
-              title: "Campaigns",
+              title: "Creative & Digital Campaigns",
               description:
-                "Integrated creative campaigns that capture attention and drive engagement across all touchpoints.",
+                "Data-backed creative campaigns designed to engage audiences and drive conversion across digital channels.",
             },
             {
-              title: "Creative Direction",
-              description: "Strategic vision and execution guidance to ensure cohesive, compelling creative output.",
+              title: "eCommerce & Website Design",
+              description: "Designing responsive, high-converting storefronts and promotional sites that balance aesthetics with performance.",
             },
             {
-              title: "Photography",
+              title: "Digital Operations & Consulting",
               description:
-                "Commercial and editorial photography that tells authentic stories and elevates brand narratives.",
+                "Bridging the gap between creative vision and technical implementation.",
             },
-            {
-              title: "Branding",
-              description:
-                "Comprehensive brand development from strategy and positioning to visual expression and guidelines.",
-            },
-            {
-              title: "Consulting",
-              description: "Expert guidance on creative strategy, process optimization, and team collaboration.",
-            },
+            
           ].map((service, i) => (
             <div key={i} className="bg-card p-8 rounded-sm">
               <h3 className="text-xl font-medium mb-3">{service.title}</h3>

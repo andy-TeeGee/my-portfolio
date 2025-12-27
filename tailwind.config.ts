@@ -22,7 +22,6 @@ const config = {
         sans: ["var(--font-sans)", "sans-serif"],
         serif: ["var(--font-sans)", "sans-serif"],
       },
-
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -63,6 +62,7 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      // --- ADDED KEYFRAMES ---
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -72,10 +72,22 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        // Orbit animation keyframes
+        orbit: {
+          "0%": {
+            transform: "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
       },
+      // --- ADDED ANIMATIONS ---
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        // Orbit animation utility
+        orbit: "orbit calc(var(--duration)*1s) linear infinite",
       },
     },
   },
