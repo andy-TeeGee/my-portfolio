@@ -156,29 +156,30 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {[
               {
-                title: "Industrial B2B Digital Awareness Campaign",
+                title: "Depatie Fluid Power: Digital Transformation & 8x Growth",
                 category: "Digital Campaigns",
                 year: "2025",
                 image: "/depatie-campaign-overview-cover.jpg",
               },
               {
-                title: "FemTech Startup Rebrand & Identity Refresh",
-                category: "Brand Strategy",
-                year: "2025",
-                image: "/mammha-rebrand-overview-cover.jpg",
+                title: "The Doors: Visual Identity for a Posthumous Release",
+                category: "Visual Design",
+                year: "2023",
+                image: "/doors-poster.jpg",
               },
               {
-                title: "Systems Analysis & Design Research on Generative AI",
+                title: "Deconstructing GenAI: A Technical Systems Analysis",
                 category: "Research & Insights",
                 year: "2025",
                 image: "/systems-analysis-research-paper.png",
               },
               {
-                title: "The Doors - Live In Bakersfield Promotional Posters",
-                category: "Visual Design",
-                year: "2023",
-                image: "/doors-poster.jpg",
+                title: "Mammha: Building a Brand for Maternal Mental Health",
+                category: "Brand Strategy",
+                year: "2025",
+                image: "/mammha-rebrand-overview-cover.jpg",
               },
+             
             ].map((project, i) => (
               <Link key={i} href={`/portfolio/${project.title.toLowerCase().replace(/\s+/g, "-")}`} className="group">
                 <div className="aspect-[4/3] bg-muted rounded-sm overflow-hidden mb-4">
