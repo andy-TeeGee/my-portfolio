@@ -174,7 +174,7 @@ export default function WorkWithMePage() {
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-left">What is your typical project timeline?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Project timelines vary based on scope and complexity. A typical brand identity project takes 3-6 weeks,
+                Project timelines vary based on scope and complexity. A typical brand identity project takes 3-6 weeks, a site can take anywhere from 1-7 week(s), 
                 while campaign work might range from 4-12 weeks. I'll provide a detailed timeline during our initial
                 consultation based on your specific needs.
               </AccordionContent>

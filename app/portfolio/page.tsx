@@ -28,7 +28,7 @@ const projects = [
   },
   {
     id: "systems-analysis-research",
-    title: "Deconstructing GenAI: A Technical Systems Analysis",
+    title: "Mechanisms of GenAI: A Strategic Framework for Digital Platforms",
     category: "Research & Insights",
     year: "2025",
     tags: ["Research", "Systems Analysis", "Social Impact", "Editorial"],
@@ -36,7 +36,7 @@ const projects = [
     description: "A comprehensive research paper on mechanisms of generative AI as my final class project.",
   },
   {
-    id: "Mammha-rebrand",
+    id: "mammha-rebrand",
     title: "Mammha: Building a Brand for Maternal Mental Health",
     category: "Brand Strategy",
     year: "2025",
@@ -55,7 +55,7 @@ const projects = [
   },
   {
     id: "consumer-research",
-    title: "Our Silver Economy: Consumer Behavior Analysis",
+    title: "Generational Shifts in Consumer Behavior: A Qualitative Analysis of the 65+ Demographic",
     category: "Research & Insights",
     year: "2025",
     tags: ["Research", "Consumer Behavior", "Strategy"],

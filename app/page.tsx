@@ -168,7 +168,7 @@ export default function HomePage() {
                 image: "/doors-poster.jpg",
               },
               {
-                title: "Deconstructing GenAI: A Technical Systems Analysis",
+                title: "Mechanisms of GenAI: A Strategic Framework for Digital Platforms",
                 category: "Research & Insights",
                 year: "2025",
                 image: "/systems-analysis-research-paper.png",
