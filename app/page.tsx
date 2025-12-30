@@ -165,13 +165,13 @@ export default function HomePage() {
                 title: "The Doors: Visual Identity for a Posthumous Release",
                 category: "Visual Design",
                 year: "2023",
-                image: "/doors-poster.jpg",
+                image: "portfolio/doors-poster.jpg",
               },
               {
                 title: "Mechanisms of GenAI: A Strategic Framework for Digital Platforms",
                 category: "Research & Insights",
                 year: "2025",
-                image: "/systems-analysis-research-paper.png",
+                image: "portfolio/systems-analysis-research-diagram.jpg",
               },
               {
                 title: "Mammha: Building a Brand for Maternal Mental Health",

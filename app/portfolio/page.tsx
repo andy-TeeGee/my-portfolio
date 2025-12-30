@@ -23,7 +23,7 @@ const projects = [
     category: "Visual Design",
     year: "2023",
     tags: ["Visual Design", "Identity", "Print"],
-    image: "/doors-poster.jpg",
+    image: "portfolio/doors-poster.jpg",
     description: "Promotional poster design commemorating the new release of the album Live In Bakersfield.",
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     category: "Research & Insights",
     year: "2025",
     tags: ["Research", "Systems Analysis", "Social Impact", "Editorial"],
-    image: "/systems-analysis-research-paper.png",
+    image: "portfolio/systems-analysis-research-diagram.jpg",
     description: "A comprehensive research paper on mechanisms of generative AI as my final class project.",
   },
   {
@@ -59,7 +59,7 @@ const projects = [
     category: "Research & Insights",
     year: "2025",
     tags: ["Research", "Consumer Behavior", "Strategy"],
-    image: "/consumer-habits-research.jpg",
+    image: "portfolio/consumer-habits-research.jpg",
     description: "A qualitative research paper analyzing consumer habits among aging populations.",
   },
  {
@@ -68,7 +68,7 @@ const projects = [
     category: "Visual Design",
     year: "2025",
     tags: ["Identity", "Strategy", "Visual Design"],
-    image: "/rsc-web-design.jpg",
+    image: "portfolio/rsc-web-design.jpg",
     description: "Complete website redesign for regional construction company.",
   },
   {
@@ -77,7 +77,7 @@ const projects = [
     category: "Social Impact",
     year: "2025",
     tags: ["Research", "Environmental", "Strategy"],
-    image: "/waste-reduction-proposal.jpg",
+    image: "portfolio/waste-reduction-proposal.jpg",
     description: "A project proposal to reduce waste on Western Michigan University's campus through strategic initiatives.",
   },
   {
@@ -86,7 +86,7 @@ const projects = [
     category: "Visual Design",
     year: "2022",
     tags: ["Identity", "Visual Design", "Print"],
-    image: "/vehicle-wrapping-design.jpg",
+    image: "portfolio/vehicle-wrapping-design.jpg",
     description: "Vehicle wrapping, printing and design for local businesses.",
   },
   {
@@ -95,7 +95,7 @@ const projects = [
     category: "Digital Campaigns",
     year: "2025",
     tags: ["Identity", "Strategy", "Visual Design"],
-    image: "/paw-spa-ad-campaign.jpg",
+    image: "portfolio/paw-spa-ad-campaign.png",
     description: "Proposed ad campaign and creative brief for a new market entrant in the pet care industry.",
   },
 ]
