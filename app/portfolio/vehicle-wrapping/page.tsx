@@ -6,8 +6,15 @@ import { ImageGallery } from "@/components/image-gallery"
 export default function VehicleWrappingPage() {
   const project = {
     title: "Applied Design: The Art of Vehicle Wrapping",
+    
+    // 1. HERO SUMMARY (Short Hook)
     overview:
       "Designing for vehicle wraps is a unique challenge where 2D graphics must translate perfectly onto complex 3D surfaces. Over this period, I designed, printed, and installed full wraps for over 15 commercial vehicles, mastering the intersection of digital precision and physical application.",
+    
+    // 2. THE CHALLENGE (Detailed Body Text - EDIT HERE)
+    challenge:
+      "Vehicle wrapping is unforgiving. Unlike a web page, you can't resize the canvas. The challenge was to create high-impact branding that remained legible at 60mph while navigating door handles, complex body curves, and safe zones. This required creating 1:1 scale templates and managing massive print files to ensure zero pixelation on output. Each installation demanded not just design skills, but physical craftsmanship to stretch and mold vinyl without distortion.",
+
     process: [
       {
         phase: "Templating & Measurement",
@@ -25,12 +32,13 @@ export default function VehicleWrappingPage() {
           "Hands-on execution: RIP software management, printing, laminating, and the meticulous physical installation process requiring patience and precision.",
       },
     ],
-    // Replace with your wrap photos
+    
+    // UPDATED IMAGE PATHS
     images: [
-      "/placeholder.svg", // Full Side Profile
-      "/placeholder.svg", // 3/4 Angle Shot
-      "/placeholder.svg", // Detail of a difficult curve/seam
-      "/placeholder.svg", // Wide shot of multiple vehicles?
+      "/portfolio/vehicle-wrapping-welding.jpg", 
+      "/portfolio/vehicle-wrapping-towing.jpg", 
+      "/portfolio/vehicle-wrapping-firetruck.jpg", 
+      "/portfolio/vehicle-wrapping-anime.jpg", 
     ],
   }
 
@@ -47,7 +55,7 @@ export default function VehicleWrappingPage() {
         </Link>
       </div>
 
-      {/* Hero Section (Research Paper Style) */}
+      {/* Hero Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-4xl">
           <div className="flex flex-wrap gap-4 mb-6 text-sm text-primary font-medium uppercase tracking-wider">
@@ -99,10 +107,11 @@ export default function VehicleWrappingPage() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
+            {/* Left: The Challenge (Uses new unique text) */}
             <div className="lg:col-span-8">
                 <h2 className="text-2xl font-medium mb-6">The Challenge</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                    {project.overview}
+                    {project.challenge}
                 </p>
                 
                 <h3 className="text-xl font-medium mb-4">Skills Deployed</h3>
@@ -116,6 +125,7 @@ export default function VehicleWrappingPage() {
                 </ul>
             </div>
             
+            {/* Right: Production Stats */}
             <div className="lg:col-span-4 space-y-6">
                  <div className="bg-muted/30 p-6 rounded-lg border">
                     <h3 className="font-medium mb-4">Production Stats</h3>
@@ -137,6 +147,7 @@ export default function VehicleWrappingPage() {
             </div>
         </div>
 
+        {/* Process & Gallery */}
         <section className="mb-24">
              <h2 className="text-3xl font-medium mb-8">The Process: Digital to Physical</h2>
              <div className="grid md:grid-cols-3 gap-8 mb-16">

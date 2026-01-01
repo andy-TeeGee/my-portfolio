@@ -1,13 +1,20 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, ArrowRight, Calendar, User, Layers, PenTool } from "lucide-react"
-import { ImageGallery } from "@/components/image-gallery"
 
 export default function DoorsPosterPage() {
   const project = {
     title: "The Doors: Visual Identity for a Posthumous Release",
+    
+    // 1. HERO SUMMARY (Short Hook)
     overview:
       "Commissioned by GarageLand, and working closely with Kerry Faust, the two of us designed a promotional poster for The Doors' new album, \"Live in Bakersfield,\" aimed at commemorating the release and driving engagement with their legacy fan base and new listeners.",
+    
+    // 2. THE ASSIGNMENT (Detailed Body Text)
+    assignment: 
+      "We needed to capture the raw, psychedelic energy of the 1970 live performance while maintaining a polished, archival quality suitable for a modern release. The final deliverables included a limited-edition lithograph poster and a suite of digital assets for GarageLand to utilize. The biggest challenge was limited the color pallete to only 5 colors for the lithographic printing process, while still conveying the vibrant energy of The Doors' live performance.",
+
     process: [
       {
         phase: "Archival Research",
@@ -25,12 +32,12 @@ export default function DoorsPosterPage() {
           "Finalized high-fidelity vector assets and managed the complex pre-press process, ensuring color accuracy for large-format lithographic printing.",
       },
     ],
-    // Replace these with your actual image paths
+    
     images: [
-      "/placeholder.svg", // Poster Full View
-      "/placeholder.svg", // Detail Shot: Typography
-      "/placeholder.svg", // Detail Shot: Texture/Color
-      "/placeholder.svg", // Context Shot (on a wall or digital mock)
+      "/portfolio/doors-progress1.jpg", 
+      "/portfolio/doors-progress2.jpg", 
+      "/portfolio/doors-progress3.jpg", 
+      "/portfolio/doors-progress4.jpg", 
     ],
   }
 
@@ -47,7 +54,7 @@ export default function DoorsPosterPage() {
         </Link>
       </div>
 
-      {/* Hero Section (Research Paper Style) */}
+      {/* Hero Section */}
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-4xl">
           <div className="flex flex-wrap gap-4 mb-6 text-sm text-primary font-medium uppercase tracking-wider">
@@ -98,13 +105,12 @@ export default function DoorsPosterPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Visual-First Layout: Gallery Up Top? No, let's keep Context first, then Big Gallery */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20">
-            {/* Left: Overview */}
+            {/* Left: The Assignment */}
             <div className="lg:col-span-8">
                 <h2 className="text-2xl font-medium mb-6">The Assignment</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                    {project.overview}
+                    {project.assignment}
                 </p>
                 
                 <h3 className="text-xl font-medium mb-4">Services Delivered</h3>
@@ -118,7 +124,7 @@ export default function DoorsPosterPage() {
                 </ul>
             </div>
             
-            {/* Right: Key Metrics / "Metadata" Box */}
+            {/* Right: Key Metrics */}
             <div className="lg:col-span-4 space-y-6">
                  <div className="bg-muted/30 p-6 rounded-lg border">
                     <h3 className="font-medium mb-4">Project Impact</h3>
@@ -140,7 +146,7 @@ export default function DoorsPosterPage() {
             </div>
         </div>
 
-        {/* The "Meat": Process & Gallery */}
+        {/* Process & Gallery */}
         <section className="mb-24">
              <h2 className="text-3xl font-medium mb-8">Design Process</h2>
              <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -153,10 +159,23 @@ export default function DoorsPosterPage() {
                 ))}
              </div>
 
-            {/* Gallery Section */}
-             <div className="space-y-4">
+             <div className="space-y-8">
                  <h2 className="text-3xl font-medium mb-8">Visual Gallery</h2>
-                 <ImageGallery images={project.images} />
+                 
+                 {/* Custom Aspect Ratio Grid (3:4 Ratio) */}
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {project.images.map((img, i) => (
+                      <div key={i} className="relative w-full aspect-[3/4] bg-muted rounded-sm overflow-hidden border">
+                         <Image 
+                           src={img} 
+                           alt={`Doors Poster Progress ${i + 1}`}
+                           fill
+                           className="object-cover"
+                           sizes="(max-width: 768px) 100vw, 50vw"
+                         />
+                      </div>
+                    ))}
+                 </div>
              </div>
         </section>
 
