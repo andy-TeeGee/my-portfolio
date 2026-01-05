@@ -27,7 +27,7 @@ export default function AboutPage() {
         <section className="max-w-3xl mb-20">
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              I had my first job when I was 14, on my family's farm in rural Michigan. Here I learned the value of hard work, attention to detail, and the importance of growing something from start to finish.
+              I had my first job when I was 14, working on my family's farm in rural Michigan. Here I learned the value of hard work, attention to detail, and the importance of growing something from start to finish.
             </p>
             <p>
               I carried these lessons with me to college, where I studied Digital Marketing and eCommerce at Western Michigan University. Early on, I realized that the most successful campaigns weren't just about virality or luck, but rather systems that tie businesses and customers together.
@@ -95,7 +95,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-medium">Content & Ops</h3>
               </div>
               <div className="flex flex-wrap gap-2">
-                {["Google Workspace", "MS Office", "NetSuite", "Asana","Email Marketing", "OpenAI APIs", "Copwriting", "Project Management"].map((tech) => (
+                {["Google Workspace", "MS Office", "NetSuite", "Asana","Email Marketing", "OpenAI APIs", "Copywriting", "Project Management"].map((tech) => (
                   <span key={tech} className="px-3 py-1 bg-muted rounded-full text-sm font-medium">
                     {tech}
                   </span>
@@ -119,7 +119,7 @@ export default function AboutPage() {
             <div className="border-l-2 border-primary pl-6">
               <h3 className="text-xl font-medium mb-2">Data-informed, human-centric</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I love data, but spreadsheets don't buy products, people do. Let's use analytics to find the opportunity, then use empathy and creativity to connect with the human on the other side of the screen.
+                I love data, but spreadsheets don't buy products - people do. Let's use analytics to find the opportunity, then use empathy and creativity to connect with the human on the other side of the screen.
               </p>
             </div>
             <div className="border-l-2 border-primary pl-6">

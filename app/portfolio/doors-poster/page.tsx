@@ -13,23 +13,23 @@ export default function DoorsPosterPage() {
     
     // 2. THE ASSIGNMENT (Detailed Body Text)
     assignment: 
-      "We needed to capture the raw, psychedelic energy of the 1970 live performance while maintaining a polished, archival quality suitable for a modern release. The final deliverables included a limited-edition lithograph poster and a suite of digital assets for GarageLand to utilize. The biggest challenge was limited the color pallete to only 5 colors for the lithographic printing process, while still conveying the vibrant energy of The Doors' live performance.",
+      "We needed to capture the psychedelic energy of the 1970 live performance while maintaining a polished, archival quality suitable for a modern release. The final deliverables included a limited-edition lithograph poster and a suite of digital assets for GarageLand to utilize. The biggest challenge was limiting the color pallete to only 5 colors for the lithographic printing process, while still conveying the vibrant energy of The Doors' live performance.",
 
     process: [
       {
-        phase: "Archival Research",
+        phase: "Pen & Paper Illustration",
         description:
-          "Deep-dive into the band's 1970 tour archives to reference specific period-accurate typography, color palettes, and imagery from the Bakersfield era.",
+          "Kerry first approached me with a series of hand-drawn sketches (1st image) to capture the imagery, energy, and composition inspired by The Doors' and the 70s.",
       },
       {
-        phase: "Concept Development",
+        phase: "Digital Rendering",
         description:
-          "Explored three distinct visual directions: 'Pure Psychedelic', 'Modern Minimalist', and the chosen 'Archival Grit' direction that bridged the gap between eras.",
+          "Transitioned hand-drawn concepts into high-resolution digital illustrations, refining the composition with new details and ensuring visual consistency.",
       },
       {
         phase: "Execution & Print Prep",
         description:
-          "Finalized high-fidelity vector assets and managed the complex pre-press process, ensuring color accuracy for large-format lithographic printing.",
+          "Produced numerous versions of the final poster design while managing the complex pre-press process, ensuring color accuracy for large-format lithographic printing.",
       },
     ],
     
@@ -115,7 +115,7 @@ export default function DoorsPosterPage() {
                 
                 <h3 className="text-xl font-medium mb-4">Services Delivered</h3>
                 <ul className="grid grid-cols-2 gap-2 mb-8">
-                    {['Poster Design', 'Visual Identity', 'Merchandise Design'].map((service, i) => (
+                    {['Poster Design', 'Visual Identity', 'Merchandise Design', 'Value Creation'].map((service, i) => (
                         <li key={i} className="flex items-center text-muted-foreground">
                             <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
                             {service}
