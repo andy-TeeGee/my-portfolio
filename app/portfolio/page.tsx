@@ -14,7 +14,7 @@ const projects = [
     category: "Digital Campaigns",
     year: "2025",
     tags: ["Campaign", "Owned Media", "Strategy"],
-    image: "/depatie-campaign-overview-cover.jpg",
+    image: "/portfolio/depatie-campaign-overview-cover.jpg",
     description: "Owned media campaign for industrial B2B company, driving awareness and lead generation.",
   },
   {
@@ -50,7 +50,7 @@ const projects = [
     category: "Digital Campaigns",
     year: "2026",
     tags: ["Identity", "Strategy", "Leadership"],
-    image: "/dmsa-relanch.jpg",
+    image: "/portfolio/dmsa-hero.jpg",
     description: "Rebranding and restructuring the Digital Marketing Student Association to better serve marketing students at WMU.",
   },
   {

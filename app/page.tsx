@@ -86,10 +86,8 @@ export default function HomePage() {
                 <Lightbulb className="size-5 text-foreground" />
               </OrbitingCircles>
 
-
               {/* --- OUTER ORBIT --- */}
-              {/* Swapped: Target is now first (delay 0), Lightbulb is second (delay 10) */}
-              
+            
               <OrbitingCircles
                 className="border bg-background/90 shadow-sm"
                 iconSize={60}
@@ -159,29 +157,38 @@ export default function HomePage() {
                 title: "Depatie Fluid Power: Digital Transformation & 8x Growth",
                 category: "Digital Campaigns",
                 year: "2025",
-                image: "/depatie-campaign-overview-cover.jpg",
+                image: "/portfolio/depatie-campaign-overview-cover.jpg",
+                // ADDED SLUG: Points to /portfolio/depatie-campaign
+                slug: "depatie-campaign" 
               },
               {
                 title: "The Doors: Visual Identity for a Posthumous Release",
                 category: "Visual Design",
                 year: "2023",
-                image: "portfolio/doors-poster.jpg",
+                image: "/portfolio/doors-poster.jpg",
+                // ADDED SLUG: Points to /portfolio/doors-poster
+                slug: "doors-poster" 
               },
               {
                 title: "Mechanisms of GenAI: A Strategic Framework for Digital Platforms",
                 category: "Research & Insights",
                 year: "2025",
-                image: "portfolio/systems-analysis-research-diagram.jpg",
+                image: "/portfolio/systems-analysis-research-diagram.jpg",
+                // ADDED SLUG: Points to /portfolio/systems-analysis-research
+                slug: "systems-analysis-research" 
               },
               {
                 title: "Mammha: Building a Brand for Maternal Mental Health",
                 category: "Brand Strategy",
                 year: "2025",
-                image: "/mammha-rebrand-overview-cover.jpg",
+                image: "/portfolio/mammha-rebrand-cover.png",
+                // ADDED SLUG: Points to /portfolio/mammha-rebrand
+                slug: "mammha-rebrand" 
               },
-             
+              
             ].map((project, i) => (
-              <Link key={i} href={`/portfolio/${project.title.toLowerCase().replace(/\s+/g, "-")}`} className="group">
+              // UPDATED LINK HREF: Uses the slug instead of the title
+              <Link key={i} href={`/portfolio/${project.slug}`} className="group">
                 <div className="aspect-[4/3] bg-muted rounded-sm overflow-hidden mb-4">
                   <img
                     src={project.image || "/placeholder.svg"}

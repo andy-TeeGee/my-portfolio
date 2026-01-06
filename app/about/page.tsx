@@ -27,7 +27,7 @@ export default function AboutPage() {
         <section className="max-w-3xl mb-20">
           <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
             <p>
-              I had my first job when I was 14, working on my family's farm in rural Michigan. Here I learned the value of hard work, attention to detail, and the importance of growing something from start to finish.
+               My work ethic was forged early, starting at age 14 on my family's farm in rural Michigan. That experience instilled a deep appreciation for process, patience, and the satisfaction of nurturing a project from seed to harvest.
             </p>
             <p>
               I carried these lessons with me to college, where I studied Digital Marketing and eCommerce at Western Michigan University. Early on, I realized that the most successful campaigns weren't just about virality or luck, but rather systems that tie businesses and customers together.

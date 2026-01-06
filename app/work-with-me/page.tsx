@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Check } from "lucide-react"
+// UPDATED IMPORT PATH:
+import { TextAnimate } from "@/components/visuals/text-animate"
 
 export default function WorkWithMePage() {
   const [formData, setFormData] = useState({
@@ -22,7 +24,6 @@ export default function WorkWithMePage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Form submission logic will be added later (Supabase, etc.)
     console.log("Form submitted:", formData)
   }
 
@@ -32,9 +33,18 @@ export default function WorkWithMePage() {
       <section className="bg-card py-12 md:py-20 mb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-medium mb-6 text-balance">
+            {/* ANIMATED HEADER */}
+            <TextAnimate
+              animation="blurInUp"
+              by="word"
+              as="h1"
+              className="text-4xl md:text-6xl font-medium mb-6 text-balance"
+              duration={0.8}
+              delay={0.1}
+            >
               Let's build something that works as good as it looks.
-            </h1>
+            </TextAnimate>
+            
             <p className="text-lg text-muted-foreground leading-relaxed">
               I don't just make things pretty. I bridge the gap between creative vision and business strategy to build brands, campaigns, and digital experiences that actually drive results.
             </p>
@@ -94,7 +104,6 @@ export default function WorkWithMePage() {
           <h2 className="text-3xl md:text-4xl font-medium mb-6">Select Partners</h2>
           <p className="text-lg text-muted-foreground mb-8">
             Partnering with ambitious organizations to scale their digital presence and operational efficiency.
-
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -136,7 +145,6 @@ export default function WorkWithMePage() {
             ))}
           </div>
         </section>
-
 
         {/* Testimonials */}
         <section className="mb-20">

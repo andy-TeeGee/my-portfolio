@@ -9,7 +9,14 @@ export default function DepatieCampaignPage() {
       {/* 1. IMPACT HERO */}
       <div className="bg-foreground text-background py-20 md:py-32 mb-16 relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <Button asChild variant="outline" size="sm" className="mb-8 border-background/20 text-background hover:bg-background hover:text-foreground">
+          
+          {/* UPDATED BUTTON: Hover text is now exactly #972527 */}
+          <Button 
+            asChild 
+            variant="ghost" 
+            size="sm" 
+            className="mb-8 bg-background text-muted-foreground hover:bg-background hover:text-[#972527] transition-colors rounded-sm"
+          >
             <Link href="/portfolio">
               <ArrowLeft className="mr-2" size={16} />
               Back to portfolio
@@ -20,8 +27,9 @@ export default function DepatieCampaignPage() {
             <Badge variant="outline" className="mb-6 text-primary-foreground border-primary-foreground/30 py-1.5 px-4 text-sm uppercase tracking-wide">
               B2B Digital Transformation
             </Badge>
+            
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium mb-8 text-balance leading-tight">
-              Depatie Fluid Power: <span className="text-muted-foreground">Digital Transformation & 8x Growth</span>
+              <span style={{ color: '#feb914' }}>Depatie Fluid Power</span>: <span className="text-muted-foreground">Digital Transformation & 8x Growth</span>
             </h1>
 
             {/* The "Big Wins" Grid */}
