@@ -9,26 +9,30 @@ export default function MammhaPage() {
   const project = {
     title: "Mammha: Building a Brand for Maternal Mental Health",
     overview:
-      "A complete brand overhaul for a Femtech startup dedicated to maternal mental health screening. The rebrand transformed a clinical, fragmented identity into a warm, accessible, and scalable system ready for seed-stage investment.",
+      "A complete brand overhaul for a Femtech startup dedicated to screening, treatment, and support for maternal mental health. The rebrand transformed a clinical, fragmented identity into a warm, accessible, and scalable system ready for seed-stage investment.",
     year: "2025",
     client: "Mammha",
-    role: "Lead Designer & Brand Strategist",
+    role: "Digital Marketer & Strategist",
     category: "Brand Identity",
     
     // NARRATIVE SECTIONS
     challenge: 
-      "Mammha had a powerful mission—saving mothers' lives through early screening—but their visual identity felt clinical and cold. As they prepared for a critical fundraising round, they needed a brand that felt trustworthy to hospitals but approachable to mothers. The goal was to humanize the medical data without losing professional credibility.",
+      "Mammha has an incredibly powerful mission - saving mothers' lives through early screening and treatment, but their visual identity felt dated and unrefined. In order to increase the current number of users, it was important the brand felt more approachable and trustworthy. The goal was to humanize the medical data without losing professional credibility.",
     
     solution:
-      "We built a 'Warm Clinical' aesthetic. By pairing soft, skin-tone inspired palettes with clean, sans-serif typography, we created a visual language that felt like a supportive partner rather than a medical test. The new system extended across everything from the pitch deck to the patient portal interface.",
+      "By combining bold colors with soft, rounded typography and organic shapes, we created a brand identity that feels both modern and compassionate. The new logo includes 3 figures holding another up, symbolizing community support, the very thing Mammha embodies. Above all, the new brand system is designed to be flexible and scalable, allowing Mammha to adapt as they grow and expand their services.",
 
-    // IMAGE ASSETS (Placeholders)
+    // IMAGE ASSETS (Update these unique social paths!)
     images: {
-        logo: "/placeholder.svg",      
-        palette: "/placeholder.svg",   
-        social: "/placeholder.svg",    
-        web: "/placeholder.svg",       
-        collateral: "/placeholder.svg" 
+        hero: "/portfolio/mammha-rebrand-hero.png", 
+        palette: "/portfolio/mammha-brand-palette.jpg",   
+        typography: "/portfolio/mammha-typography.jpg",  // Renamed for clarity 
+        web: "/portfolio/mammha-web.jpg",       
+        
+        // UNIQUE SOCIALS
+        social1: "/portfolio/mammha-social-post-1.png", // e.g. /portfolio/mammha-social-post-1.jpg
+        social2: "/portfolio/mammha-social-post-2.png", // e.g. /portfolio/mammha-social-post-2.jpg
+        social3: "/portfolio/mammha-social-post-3.png"  // e.g. /portfolio/mammha-social-post-3.jpg
     }
   }
 
@@ -105,7 +109,7 @@ export default function MammhaPage() {
                 </p>
                 <h3 className="text-xl font-medium mb-4">Services Delivered</h3>
                 <ul className="grid grid-cols-2 gap-2">
-                    {['Brand Strategy', 'Logo Design', 'Web Design', 'Pitch Deck'].map((service, i) => (
+                    {['Brand Strategy', 'Value Creation', 'Graphic Design', 'Content Creation', 'Web Design', 'Copywriting', 'Positioning', 'Communications'].map((service, i) => (
                         <li key={i} className="flex items-center text-muted-foreground text-sm">
                             <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
                             {service}
@@ -114,9 +118,9 @@ export default function MammhaPage() {
                 </ul>
             </div>
             <div className="lg:col-span-7">
-                <div className="aspect-[4/3] bg-muted rounded-sm overflow-hidden relative border">
+                <div className="aspect-[2/1] bg-muted rounded-sm overflow-hidden relative border">
                     <Image 
-                       src={project.images.logo} 
+                       src={project.images.hero} 
                        alt="Mammha Rebrand Hero" 
                        fill 
                        className="object-cover" 
@@ -135,11 +139,11 @@ export default function MammhaPage() {
             </div>
             
             <div className="grid md:grid-cols-2 gap-6 mb-6">
-                 <div className="aspect-square bg-muted rounded-sm overflow-hidden relative border">
+                 <div className="aspect-[2/1] bg-muted rounded-sm overflow-hidden relative border">
                      <Image src={project.images.palette} alt="Brand Palette" fill className="object-cover" />
                  </div>
-                 <div className="aspect-square bg-muted rounded-sm overflow-hidden relative border">
-                     <Image src={project.images.collateral} alt="Typography & Detail" fill className="object-cover" />
+                 <div className="aspect-[2/1] bg-muted rounded-sm overflow-hidden relative border">
+                     <Image src={project.images.typography} alt="Typography & Detail" fill className="object-cover" />
                  </div>
             </div>
         </div>
@@ -152,11 +156,11 @@ export default function MammhaPage() {
                  <Image src={project.images.web} alt="Website Mockup" fill className="object-cover" />
              </div>
              
-             {/* Social Grid */}
+             {/* Social Grid - Now using unique images */}
              <div className="grid grid-cols-3 gap-6">
-                 {[1,2,3].map((i) => (
+                 {[project.images.social1, project.images.social2, project.images.social3].map((img, i) => (
                      <div key={i} className="aspect-square bg-muted rounded-sm overflow-hidden relative border">
-                         <Image src={project.images.social} alt={`Social Asset ${i}`} fill className="object-cover" />
+                         <Image src={img} alt={`Social Asset ${i+1}`} fill className="object-cover" />
                      </div>
                  ))}
              </div>

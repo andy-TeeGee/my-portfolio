@@ -41,7 +41,7 @@ const projects = [
     category: "Brand Strategy",
     year: "2025",
     tags: ["Identity", "Strategy", "Visual Design"],
-    image: "/mammha-rebrand-overview-cover.jpg",
+    image: "portfolio/mammha-rebrand-cover.png",
     description: "To increase market presence, we developed a fresh brand identity for a growing tech startup.",
   },
   {
