@@ -120,12 +120,10 @@ export default function WorkWithMePage() {
               { 
                 name: "Blu-M Studios", 
                 src: "/logos/Trustedby_BluM.jpg", 
-                url: "https://blu-m.com/" 
               },
               { 
                 name: "Rob Seth Construction", 
                 src: "/logos/Trustedby_RSC.jpg", 
-                url: "https://www.robsethconstruction.com" 
               },
             ].map((client, i) => (
               <a

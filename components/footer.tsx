@@ -30,7 +30,7 @@ export default function Footer() {
           {/* Right: Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/in/andrew-goheen/"
+              href="https://www.linkedin.com/in/andrewtgoheen/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
