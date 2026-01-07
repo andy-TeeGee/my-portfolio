@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, BarChart3, Globe, Database, Star, PenTool } from "lucide-react";
+import { ArrowLeft, ArrowRight, Database, Star, PenTool, Brain } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export default function DepatieCampaignPage() {
@@ -10,7 +10,6 @@ export default function DepatieCampaignPage() {
       <div className="bg-foreground text-background py-20 md:py-32 mb-16 relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          {/* UPDATED BUTTON: Hover text is now exactly #972527 */}
           <Button 
             asChild 
             variant="ghost" 
@@ -70,18 +69,18 @@ export default function DepatieCampaignPage() {
                     </div>
                     <div>
                       <span className="block text-foreground font-medium mb-1">Focus</span>
-                      Organic Growth, SEO, Content Strategy
+                      Organic Growth, SEO, Content Strategy, Web Design, User Experience, Data Automation, Owned Media
                     </div>
                     <div>
                       <span className="block text-foreground font-medium mb-1">Tools</span>
-                      Google Merchant Center, SEMRush, Adobe Creative Suite
+                      Google Workspace (Google Marketing Platform), Microsoft 365 Copilot, NetSuite, Semrush, Adobe Creative Suite, Postman, OpenAI API
                     </div>
                   </div>
                 </div>
 
                 <nav className="hidden lg:block space-y-1">
                   <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-3 px-2">Case Study Sections</p>
-                  {['The Challenge', 'GMC Optimization', 'Content & Design', 'Review Campaign'].map((item) => (
+                  {['The Challenge', 'Customer Intelligence', 'GMC Optimization', 'Content & Design', 'Review Campaign'].map((item) => (
                     <a key={item} href={`#${item.toLowerCase().replace(/\s+/g, '-').replace('&', '')}`} 
                        className="block px-3 py-2 text-sm text-muted-foreground hover:text-primary hover:bg-secondary/50 rounded-sm transition-colors">
                       {item}
@@ -98,30 +97,82 @@ export default function DepatieCampaignPage() {
             <section id="the-challenge" className="prose prose-lg dark:prose-invert max-w-none">
               <h2 className="text-3xl font-medium mb-6">The Challenge: An Analog Giant in a Digital World</h2>
               <p className="text-xl leading-relaxed text-muted-foreground">
-                Depatie Fluid Power is a powerhouse in industrial distribution, but their digital footprint didn't match their physical inventory. With over 15,000 SKUs hidden behind a legacy interface and zero visibility on Google Shopping, they were leaving massive revenue on the table.
-              </p>
-              <p>
-                My directive was clear: modernize the digital infrastructure, make the inventory discoverable, and drive organic traffic through strategic content and design—without relying on paid spend.
+                Despite being an industrial leader, Depatie Fluid Power’s digital footprint didn't reflect their scale. Facing a legacy interface that obscured over 15,000 SKUs, the company needed a complete digital awareness strategy. My work here focused on elevating brand visibility and exposure to capture B2B market share and secure a place in buyer's consideration set.
+
+
               </p>
             </section>
 
-            {/* 2. GMC Optimization */}
+            {/* 2. NEW SECTION: AI-Powered Customer Intelligence */}
+            <section id="customer-intelligence" className="border-t pt-12">
+               <div className="flex items-center gap-3 mb-6">
+                 <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg text-green-600 dark:text-green-400">
+                    <Brain size={24} />
+                 </div>
+                 <h2 className="text-3xl font-medium">AI-Powered Customer Intelligence</h2>
+               </div>
+               
+               <p className="text-xl leading-relaxed text-muted-foreground mb-8">
+                 Cleaning, Automating, and Scaling Customer Segmentation
+               </p>
+
+               <div className="grid md:grid-cols-2 gap-8 mb-8">
+                  <div className="bg-card p-6 rounded-sm border">
+                    <h4 className="font-medium mb-2">The Problem</h4>
+                    <p className="text-sm text-muted-foreground">
+                      With tens of thousands of active customers across hundreds of industries, we lacked the infrastructure to segment and prioritize outreach effectively. Broad targeting meant wasted effort and missed SQL opportunities.
+                    </p>
+                  </div>
+                  <div className="bg-card p-6 rounded-sm border">
+                    <h4 className="font-medium mb-2">The Solution</h4>
+                    <p className="text-sm text-muted-foreground">
+                      I collaborated with our business analyst intern to build an AI-powered automation that classifies every customer by SIC/NAICS codes in real-time. The system scrapes public data, validates industry fit, and auto-populates our CRM, with no manual input required.
+                    </p>
+                  </div>
+               </div>
+
+               <p className="text-base text-muted-foreground leading-relaxed mb-8">
+                 This wasn't just a technical project; it was a strategic shift in how we think about customer data. By integrating the OpenAI API directly into our ERP workflow, we transformed a static customer list into a dynamic, actionable database. Now, every new sign-up is automatically categorized by industry vertical, enabling hyper-targeted campaigns and smarter territory planning for our sales team.
+               </p>
+
+               {/* Stats Grid */}
+               <div className="grid grid-cols-3 gap-6 bg-muted/30 p-6 rounded-sm border">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-1">59k+</div>
+                    <div className="text-xs uppercase text-muted-foreground">Records Classified</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-1">100%</div>
+                    <div className="text-xs uppercase text-muted-foreground">Automated</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-1">Real-time</div>
+                    <div className="text-xs uppercase text-muted-foreground">Data Updates</div>
+                  </div>
+               </div>
+
+               <div className="aspect-video bg-muted rounded-sm flex items-center justify-center text-muted-foreground mt-8">
+                 [Image: CRM Dashboard showing auto-classified customer segments by industry vertical]
+               </div>
+            </section>
+
+            {/* 3. GMC Optimization */}
             <section id="gmc-optimization" className="border-t pt-12">
                <div className="flex items-center gap-3 mb-6">
                  <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg text-blue-600 dark:text-blue-400">
                     <Database size={24} />
                  </div>
-                 <h2 className="text-3xl font-medium">15,000 SKUs: Taming the Data Beast</h2>
+                 <h2 className="text-3xl font-medium">15,000 SKUs: Managing Big Data</h2>
                </div>
                
                <div className="grid md:grid-cols-2 gap-8 mb-8">
                   <div className="bg-card p-6 rounded-sm border">
                     <h4 className="font-medium mb-2">The Problem</h4>
-                    <p className="text-sm text-muted-foreground">Product data was fragmented. Missing GTINs, inconsistent titles, and no categorization meant Google Merchant Center rejected 80% of the feed.</p>
+                    <p className="text-sm text-muted-foreground">Data fragmentation was a major bottleneck. The inventory was never synced with Google Merchant Center, because of this, missing GTINs, non-standardized titles, and no categorization resulted in an initial feed rejection rate of 40%.</p>
                   </div>
                   <div className="bg-card p-6 rounded-sm border">
                     <h4 className="font-medium mb-2">The Solution</h4>
-                    <p className="text-sm text-muted-foreground">I engineered a bulk-optimization workflow. By standardizing attributes and mapping categories, we achieved a 99% approval rate.</p>
+                    <p className="text-sm text-muted-foreground">I engineered a bulk-optimization workflow. By standardizing attributes and mapping categories, we achieved a 80% approval rate, instantly taking the brand from zero listings to broad search visibility.</p>
                   </div>
                </div>
                
@@ -130,7 +181,7 @@ export default function DepatieCampaignPage() {
                </div>
             </section>
 
-            {/* 3. Content & Design (The New Section) */}
+            {/* 4. Content & Design */}
             <section id="content-design" className="border-t pt-12">
                <div className="flex items-center gap-3 mb-6">
                  <div className="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg text-purple-600 dark:text-purple-400">
@@ -140,7 +191,7 @@ export default function DepatieCampaignPage() {
                </div>
 
                <p className="text-lg text-muted-foreground mb-8">
-                 We didn't buy our traffic; we built it. I developed a high-velocity content engine, producing over 100+ branded assets ranging from technical diagrams to social graphics. This consistent visual language established Depatie as an industry authority on LinkedIn and beyond.
+                 We prioritized organic growth over paid acquisition. I built a strong content strategy, producing over 100+ branded assets ranging from technical diagrams to social graphics. This consistent visual language established Depatie as an industry authority on LinkedIn and beyond.
                </p>
 
                {/* Visual Grid for Design Assets */}
@@ -159,31 +210,31 @@ export default function DepatieCampaignPage() {
                   </div>
                </div>
                <p className="text-sm text-muted-foreground italic text-center">
-                 A cohesive visual system deployed across LinkedIn, Email, and Web.
+                 A cohesive visual system deployed across LinkedIn, Meta, and Web.
                </p>
             </section>
 
-            {/* 4. Review Campaign */}
+            {/* 5. Review Campaign */}
             <section id="review-campaign" className="border-t pt-12">
                <div className="flex items-center gap-3 mb-6">
                  <div className="p-2 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg text-yellow-600 dark:text-yellow-400">
                     <Star size={24} />
                  </div>
-                 <h2 className="text-3xl font-medium">From Ghost Town to 4.6 Stars</h2>
+                 <h2 className="text-3xl font-medium">Building a 4.6 Star Reputation</h2>
                </div>
 
                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                   <div className="text-center p-6 border rounded-sm">
-                    <div className="text-3xl font-bold mb-1">100+</div>
-                    <div className="text-xs uppercase text-muted-foreground">New Reviews</div>
+                    <div className="text-3xl font-bold mb-1">100% Growth</div>
+                    <div className="text-xs uppercase text-muted-foreground">Across previously dormant profiles</div>
                   </div>
                   <div className="text-center p-6 border rounded-sm">
-                    <div className="text-3xl font-bold mb-1">4.6</div>
-                    <div className="text-xs uppercase text-muted-foreground">National Avg</div>
+                    <div className="text-3xl font-bold mb-1">4.6/5 Stars</div>
+                    <div className="text-xs uppercase text-muted-foreground">Average Across 8 Locations</div>
                   </div>
                   <div className="text-center p-6 border rounded-sm">
-                    <div className="text-3xl font-bold mb-1">#1</div>
-                    <div className="text-xs uppercase text-muted-foreground">Regional Ranking</div>
+                    <div className="text-3xl font-bold mb-1">Top 3 Map Pack</div>
+                    <div className="text-xs uppercase text-muted-foreground">Improved local SEO visibility</div>
                   </div>
                </div>
             </section>

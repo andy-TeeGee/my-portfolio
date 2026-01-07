@@ -95,7 +95,7 @@ export default function AboutPage() {
                 <h3 className="text-xl font-medium">Content & Ops</h3>
               </div>
               <div className="flex flex-wrap gap-2">
-                {["Google Workspace", "MS Office", "NetSuite", "Asana","Email Marketing", "OpenAI APIs", "Copywriting", "Project Management"].map((tech) => (
+                {["Google Workspace", "MS 365 Copilot", "NetSuite", "Asana","Email Marketing", "OpenAI APIs", "Copywriting", "Project Management"].map((tech) => (
                   <span key={tech} className="px-3 py-1 bg-muted rounded-full text-sm font-medium">
                     {tech}
                   </span>
