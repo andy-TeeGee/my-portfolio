@@ -72,7 +72,7 @@ export default function DMSARelaunchPage() {
           <div>
             <h2 className="text-3xl font-medium mb-6">The Challenge</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              The Directing Marketing Student Association had been inactive for several years, leaving a gap in professional development opportunities for marketing students. As incoming VP, myself and the board inherited limited digital infrastructure, no value generation, and no brand presence.
+              The Digital Marketing Student Association had been in decline for several years, leaving a gap in professional development opportunities for marketing students. As incoming VP, myself and the board inherited limited digital infrastructure, no value generation, and no brand presence.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We needed to rebuild an entire organization's operational and digital ecosystem from scratch while recruiting members and securing funding, all within a single semester.
