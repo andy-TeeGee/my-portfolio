@@ -9,7 +9,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Check } from "lucide-react"
-// UPDATED IMPORT PATH:
 import { TextAnimate } from "@/components/visuals/text-animate"
 
 export default function WorkWithMePage() {
@@ -21,10 +20,42 @@ export default function WorkWithMePage() {
     budget: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          service: "",
+          budget: "",
+          message: "",
+        })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -33,7 +64,6 @@ export default function WorkWithMePage() {
       <section className="bg-card py-12 md:py-20 mb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            {/* ANIMATED HEADER */}
             <TextAnimate
               animation="blurInUp"
               by="word"
@@ -229,6 +259,7 @@ export default function WorkWithMePage() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2">
@@ -239,6 +270,7 @@ export default function WorkWithMePage() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -250,6 +282,7 @@ export default function WorkWithMePage() {
                     id="company"
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2">
