@@ -220,7 +220,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-medium mb-6">What I do</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-             I bridge the gap between creative vision and business strategy. I don't just design assets; 
+             I close the gap between creative vision and business strategy. More than designing assets; 
             I build brands, campaigns, and digital systems that drive measurable growth.
           </p>
         </div>

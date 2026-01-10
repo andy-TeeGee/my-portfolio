@@ -12,7 +12,7 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: "Andy Goheen | Digital Marketer & Researcher",
+  title: "Andrew Goheen | Digital Marketer & Researcher",
   description: "Portfolio of Andrew 'Andy' Goheen",
 }
 

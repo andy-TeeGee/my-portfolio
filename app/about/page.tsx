@@ -33,7 +33,7 @@ export default function AboutPage() {
               I carried these lessons with me to college, where I studied Digital Marketing and eCommerce at Western Michigan University. Early on, I realized that the most successful campaigns weren't just about virality or luck, but rather systems that tie businesses and customers together.
             </p>
             <p>
-              Today, I don't just hand off a strategy and hope for the best, but instead build the engine that drives it. Whether it's a scalable brand identity, a conversion-optimized campaign, or a shopify store.
+              Rather than hand off a strategy and hope for the best, I seek to build the engine that drives it. Whether it's a scalable brand identity, a conversion-optimized campaign, or a shopify store.
             </p>
           </div>
         </section>
@@ -119,7 +119,7 @@ export default function AboutPage() {
             <div className="border-l-2 border-primary pl-6">
               <h3 className="text-xl font-medium mb-2">Data-informed, human-centric</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I love data, but spreadsheets don't buy products - people do. Let's use analytics to find the opportunity, then use empathy and creativity to connect with the human on the other side of the screen.
+                Data is fascinating, but spreadsheets don't buy products - people do. Let's use analytics to find the opportunity, then use empathy and creativity to connect with the human on the other side of the screen.
               </p>
             </div>
             <div className="border-l-2 border-primary pl-6">

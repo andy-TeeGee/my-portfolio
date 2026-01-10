@@ -76,7 +76,7 @@ export default function WorkWithMePage() {
             </TextAnimate>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I don't just make things pretty. I bridge the gap between creative vision and business strategy to build brands, campaigns, and digital experiences that actually drive results.
+              I don't just make things pretty. I close the gap between creative vision and business strategy to build brands, campaigns, and digital experiences that actually drive results.
             </p>
           </div>
         </div>

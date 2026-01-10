@@ -80,7 +80,7 @@ export default function GenAIResearchPage() {
               <h2 className="text-2xl font-medium mb-4">Executive Summary</h2>
               <div className="prose prose-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Generative AI is not just a feature; but a mechanism that fundamentally reshapes the architecture of digital platforms. This research identifies four critical drivers of this transformation: Intelligent Automation, Democratization, Hyper-Personalization, and Collaborative Innovation.
+                  More than a feature, Generative AI fundamentally reshapes the architecture of digital platforms. This research identifies four critical drivers of this transformation: Intelligent Automation, Democratization, Hyper-Personalization, and Collaborative Innovation.
                 </p>
                 <p>
                   By analyzing current Information Systems (IS) literature and platform ecosystem theory, this paper argues that GenAI challenges traditional "boundary resources" (like APIs). It proposes a new governance framework where AI acts as an active mediator, lowering barriers for non-technical creators while simultaneously creating new risks around quality control and bias.

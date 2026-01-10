@@ -22,7 +22,7 @@ export default function BlogPage() {
       <div className="mb-16">
         <h1 className="text-4xl md:text-6xl font-medium mb-4">Journal</h1>
         <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-          Thoughts on marketing, strategy, and building things that work. Insights from navigating the intersection of creativity, technology, and business.
+          Thoughts on marketing, strategy, and everything that follows. Insights from navigating the intersection of creativity, technology, and business.
         </p>
       </div>
 
