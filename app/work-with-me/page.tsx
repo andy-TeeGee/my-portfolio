@@ -242,7 +242,7 @@ export default function WorkWithMePage() {
           </Accordion>
         </section>
 
-        {/* Contact Form */}
+                {/* Contact Form */}
         <section className="max-w-3xl">
           <div className="bg-card p-8 md:p-12 rounded-sm">
             <h2 className="text-3xl md:text-4xl font-medium mb-4">Project Inquiry</h2>
@@ -250,79 +250,115 @@ export default function WorkWithMePage() {
               Fill out the form below and I'll get back to you within 2 business days to discuss your project!
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {submitStatus === 'success' ? (
+              <div className="bg-green-50 border border-green-200 rounded-sm p-8 text-center">
+                <div className="text-4xl mb-4">✓</div>
+                <h3 className="text-2xl font-medium text-green-900 mb-2">Message sent successfully!</h3>
+                <p className="text-green-700 mb-6">
+                  Thanks for reaching out. I'll review your inquiry and get back to you within 2 business days.
+                </p>
+                <Button 
+                  onClick={() => setSubmitStatus('idle')} 
+                  variant="outline"
+                  className="border-green-600 text-green-700 hover:bg-green-50"
+                >
+                  Send another message
+                </Button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Name *</Label>
+                    <Input
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email *</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      required
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="company">Company</Label>
+                    <Input
+                      id="company"
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="budget">Budget Range</Label>
+                    <Input
+                      id="budget"
+                      placeholder="e.g., $1k - $10k+"
+                      value={formData.budget}
+                      onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                </div>
+
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name *</Label>
+                  <Label htmlFor="service">Service Interested In *</Label>
                   <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    id="service"
+                    placeholder="e.g., Brand Refresh, Content Marketing, SEO?"
+                    value={formData.service}
+                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     required
                     disabled={isSubmitting}
                   />
                 </div>
+
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  <Label htmlFor="message">Project Details *</Label>
+                  <Textarea
+                    id="message"
+                    placeholder="Tell me about your project, timeline, and goals..."
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    rows={6}
                     required
                     disabled={isSubmitting}
                   />
                 </div>
-              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="company">Company</Label>
-                  <Input
-                    id="company"
-                    value={formData.company}
-                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    disabled={isSubmitting}
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="budget">Budget Range</Label>
-                  <Input
-                    id="budget"
-                    placeholder="e.g., $1k - $10k+"
-                    value={formData.budget}
-                    onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                  />
-                </div>
-              </div>
+                {submitStatus === 'error' && (
+                  <div className="bg-red-50 border border-red-200 rounded-sm p-4">
+                    <p className="text-red-700 text-sm">
+                      There was an error sending your message. Please try again or email me directly at{' '}
+                      <a href="mailto:andrewtgoheen@gmail.com" className="underline">
+                        andrewtgoheen@gmail.com
+                      </a>
+                    </p>
+                  </div>
+                )}
 
-              <div className="space-y-2">
-                <Label htmlFor="service">Service Interested In *</Label>
-                <Input
-                  id="service"
-                  placeholder="e.g., Brand Refresh, Content Marketing, SEO?"
-                  value={formData.service}
-                  onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="message">Project Details *</Label>
-                <Textarea
-                  id="message"
-                  placeholder="Tell me about your project, timeline, and goals..."
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  rows={6}
-                  required
-                />
-              </div>
-
-              <Button type="submit" size="lg" className="w-full md:w-auto">
-                Send inquiry
-              </Button>
-            </form>
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full md:w-auto" 
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send inquiry'}
+                </Button>
+              </form>
+            )}
 
             <p className="text-sm text-muted-foreground mt-6">
               Prefer email? Reach me directly at{" "}
@@ -332,6 +368,7 @@ export default function WorkWithMePage() {
             </p>
           </div>
         </section>
+
       </div>
     </div>
   )

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart3, Target, PenTool, Lightbulb } from "lucide-react";
 import OrbitingCircles from "@/components/visuals/orbiting-circles";
 
+
 export default function HomePage() {
   return (
     <>
@@ -40,101 +41,103 @@ export default function HomePage() {
 
           {/* Right Side: The Orbiting Circles Animation */}
           <div className="flex-1 mt-16 lg:mt-0 flex justify-center lg:justify-end">
-            <div className="relative flex h-[500px] w-full max-w-[500px] flex-col items-center justify-center overflow-hidden">
+            <div className="relative flex h-[380px] md:h-[500px] w-full max-w-[380px] md:max-w-[500px] flex-col items-center justify-center overflow-hidden">
+              <div className="scale-75 md:scale-100 w-full h-full relative">
               
-              {/* --- INNER ORBIT --- */}
-              <OrbitingCircles
-                className="border bg-background/90 shadow-sm"
-                iconSize={36}
-                duration={30}
-                delay={0}
-                radius={80}
-              >
-                <BarChart3 className="size-5 text-primary" />
-              </OrbitingCircles>
+                {/* --- INNER ORBIT --- */}
+                <OrbitingCircles
+                  className="border bg-background/90 shadow-sm"
+                  iconSize={36}
+                  duration={30}
+                  delay={0}
+                  radius={80}
+                >
+                  <BarChart3 className="size-5 text-primary" />
+                </OrbitingCircles>
+                
+                <OrbitingCircles
+                  className="border bg-background/90 shadow-sm"
+                  iconSize={36}
+                  duration={30}
+                  delay={7.5}
+                  radius={80}
+                  path={false}
+                >
+                  <PenTool className="size-5 text-foreground" />
+                </OrbitingCircles>
+
+                <OrbitingCircles
+                  className="border bg-background/90 shadow-sm"
+                  iconSize={36}
+                  duration={30}
+                  delay={15} 
+                  radius={80}
+                  path={false}
+                >
+                  <Target className="size-5 text-primary" />
+                </OrbitingCircles>
+
+                <OrbitingCircles
+                  className="border bg-background/90 shadow-sm"
+                  iconSize={36}
+                  duration={30}
+                  delay={22.5}
+                  radius={80}
+                  path={false}
+                >
+                  <Lightbulb className="size-5 text-foreground" />
+                </OrbitingCircles>
+
+                {/* --- OUTER ORBIT --- */}
               
-              <OrbitingCircles
-                className="border bg-background/90 shadow-sm"
-                iconSize={36}
-                duration={30}
-                delay={7.5}
-                radius={80}
-                path={false}
-              >
-                <PenTool className="size-5 text-foreground" />
-              </OrbitingCircles>
+                <OrbitingCircles
+                  className="border bg-background/90 shadow-sm"
+                  iconSize={60}
+                  radius={190}
+                  duration={40}
+                  delay={0}
+                  reverse
+                >
+                  <Target className="size-[29px] text-primary" />
+                </OrbitingCircles>
+                
+                <OrbitingCircles
+                  className="border bg-background/90 shadow-sm"
+                  iconSize={60}
+                  radius={190}
+                  duration={40}
+                  delay={10}
+                  reverse
+                  path={false}
+                >
+                  <Lightbulb className="size-[29px] text-foreground" />
+                </OrbitingCircles>
 
-               <OrbitingCircles
-                className="border bg-background/90 shadow-sm"
-                iconSize={36}
-                duration={30}
-                delay={15} 
-                radius={80}
-                path={false}
-              >
-                <Target className="size-5 text-primary" />
-              </OrbitingCircles>
+                <OrbitingCircles
+                  className="border bg-background/90 shadow-sm"
+                  iconSize={60}
+                  radius={190}
+                  duration={40}
+                  delay={20}
+                  reverse
+                  path={false}
+                >
+                  <BarChart3 className="size-[29px] text-primary" />
+                </OrbitingCircles>
 
-               <OrbitingCircles
-                className="border bg-background/90 shadow-sm"
-                iconSize={36}
-                duration={30}
-                delay={22.5}
-                radius={80}
-                path={false}
-              >
-                <Lightbulb className="size-5 text-foreground" />
-              </OrbitingCircles>
-
-              {/* --- OUTER ORBIT --- */}
-            
-              <OrbitingCircles
-                className="border bg-background/90 shadow-sm"
-                iconSize={60}
-                radius={190}
-                duration={40}
-                delay={0}
-                reverse
-              >
-                <Target className="size-[29px] text-primary" />
-              </OrbitingCircles>
+                <OrbitingCircles
+                  className="border bg-background/90 shadow-sm"
+                  iconSize={60}
+                  radius={190}
+                  duration={40}
+                  delay={30}
+                  reverse
+                  path={false}
+                >
+                  <PenTool className="size-[29px] text-foreground" />
+                </OrbitingCircles>
               
-              <OrbitingCircles
-                className="border bg-background/90 shadow-sm"
-                iconSize={60}
-                radius={190}
-                duration={40}
-                delay={10}
-                reverse
-                path={false}
-              >
-                <Lightbulb className="size-[29px] text-foreground" />
-              </OrbitingCircles>
-
-              <OrbitingCircles
-                className="border bg-background/90 shadow-sm"
-                iconSize={60}
-                radius={190}
-                duration={40}
-                delay={20}
-                reverse
-                path={false}
-              >
-                <BarChart3 className="size-[29px] text-primary" />
-              </OrbitingCircles>
-
-              <OrbitingCircles
-                className="border bg-background/90 shadow-sm"
-                iconSize={60}
-                radius={190}
-                duration={40}
-                delay={30}
-                reverse
-                path={false}
-              >
-                <PenTool className="size-[29px] text-foreground" />
-              </OrbitingCircles>
-              
+              </div>
             </div>
           </div>
 
@@ -158,7 +161,6 @@ export default function HomePage() {
                 category: "Digital Campaigns",
                 year: "2025",
                 image: "/portfolio/depatie-campaign-overview-cover.jpg",
-                // ADDED SLUG: Points to /portfolio/depatie-campaign
                 slug: "depatie-campaign" 
               },
               {
@@ -166,7 +168,6 @@ export default function HomePage() {
                 category: "Visual Design",
                 year: "2023",
                 image: "/portfolio/doors-poster.jpg",
-                // ADDED SLUG: Points to /portfolio/doors-poster
                 slug: "doors-poster" 
               },
               {
@@ -174,7 +175,6 @@ export default function HomePage() {
                 category: "Research & Insights",
                 year: "2025",
                 image: "/portfolio/systems-analysis-research-diagram.jpg",
-                // ADDED SLUG: Points to /portfolio/systems-analysis-research
                 slug: "systems-analysis-research" 
               },
               {
@@ -182,12 +182,10 @@ export default function HomePage() {
                 category: "Brand Strategy",
                 year: "2025",
                 image: "/portfolio/mammha-rebrand-cover.png",
-                // ADDED SLUG: Points to /portfolio/mammha-rebrand
                 slug: "mammha-rebrand" 
               },
               
             ].map((project, i) => (
-              // UPDATED LINK HREF: Uses the slug instead of the title
               <Link key={i} href={`/portfolio/${project.slug}`} className="group">
                 <div className="aspect-[4/3] bg-muted rounded-sm overflow-hidden mb-4">
                   <img
