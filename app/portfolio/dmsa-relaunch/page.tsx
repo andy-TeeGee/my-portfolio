@@ -51,7 +51,7 @@ export default function DMSARelaunchPage() {
                 <Globe size={16} className="mr-2" />
                 Role
               </div>
-              <div className="font-medium">Vice President</div>
+              <div className="font-medium">Creative Director</div>
             </div>
             <div>
               <div className="flex items-center text-muted-foreground mb-2 text-sm">
@@ -72,7 +72,7 @@ export default function DMSARelaunchPage() {
           <div>
             <h2 className="text-3xl font-medium mb-6">The Challenge</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              The Digital Marketing Student Association had been in decline for several years, leaving a gap in professional development opportunities for marketing students. As incoming VP, myself and the board inherited limited digital infrastructure, no value generation, and no brand presence.
+              The Digital Marketing Student Association had been in decline for several years, leaving a gap in professional development opportunities for marketing students. As an incoming director, myself and the board inherited limited digital infrastructure, no value generation, and no brand presence.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We needed to rebuild an entire organization's operational and digital ecosystem from scratch while recruiting members and securing funding, all within a single semester.
@@ -87,7 +87,7 @@ export default function DMSARelaunchPage() {
                 <div className="text-4xl font-light text-muted-foreground/30 mb-4">01</div>
                 <h3 className="text-lg font-medium mb-2">Digital Foundation</h3>
                 <p className="text-sm text-muted-foreground">
-                  Built value, social media presence, and CRM systems to establish organizational legitimacy and reach.
+                  Built value, social media presence, and more importantly, a close-knit team to establish organizational legitimacy and reach.
                 </p>
               </div>
               <div className="bg-card p-6 rounded-sm border">
